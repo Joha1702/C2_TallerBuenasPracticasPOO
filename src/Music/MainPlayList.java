@@ -12,11 +12,12 @@ public class MainPlayList {
 		ArrayList<Song> songs = new ArrayList<Song>();
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 		
-		Song song1 = new Song("Perdón","David Bisbal y Greeicy", format.parse("13-04-2001"), 135, "Pop", "perdon.png", "Perdón");
+		Song song1 = new Song("Perdon","David Bisbal y Greeicy", format.parse("13-04-2001"), 135, "Pop", "perdon.png", "Perdï¿½n");
 		songs.add(song1);
-		Song song2 = new Song("Mala mía","Maluma", format.parse("01-01-2015"), 135, "Regueton", "malamia.png", "mala mía");
+		Song song2 = new Song("Mala mia","Maluma", format.parse("01-01-2015"), 135, "Regueton", "malamia.png", "mala mï¿½a");
 		songs.add(song2);
-		
+		Song song3 = new Song("001","Maluma", format.parse("01-01-2016"), 135, "Regue", "malamia.png", "mala mia");
+		songs.add(song3);
 		
 		return songs;
 		

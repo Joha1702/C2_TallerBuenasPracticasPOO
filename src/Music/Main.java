@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) throws ParseException {
 		ArrayList<Song> mainplayList = MainPlayList.generateMainPlayList();
 		PlayListImplementation playListImp = new PlayListImplementation();
-		System.out.println("Bliblioteca principal de m�sica: \n");
+		System.out.println("Bliblioteca principal de musica: \n");
 		
 		playListImp.showPlayList(mainplayList);
 
