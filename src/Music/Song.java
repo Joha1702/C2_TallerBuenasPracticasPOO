@@ -1,12 +1,13 @@
 package Music;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class Song {
 	
 	private String title;
 	private String singer;
-	private Integer identifier;
+	private UUID id;
 	private Date dateSong;
 	private int duration; //en segundos
 	private String genre;
@@ -14,11 +15,11 @@ public class Song {
 	private String description;
 	
 	
-	public Song(String title, String singer, Integer identifier, Date dateSong, int duration, String genre, String coverPage,
+	public Song(String title, String singer, Date dateSong, int duration, String genre, String coverPage,
 			String description) {
 		this.title = title;
 		this.singer = singer;
-		this.identifier = identifier;
+		this.id = UUID.randomUUID();
 		this.dateSong = dateSong;
 		this.duration = duration;
 		this.genre = genre;
@@ -38,11 +39,8 @@ public class Song {
 	public void setSinger(String singer) {
 		this.singer = singer;
 	}
-	public Integer getIdentifier() {
-		return identifier;
-	}
-	public void setIdentifier(Integer identifier) {
-		this.identifier = identifier;
+	public UUID getId() {
+		return id;
 	}
 	public Date getDateSong() {
 		return dateSong;
@@ -50,7 +48,7 @@ public class Song {
 	public void setDateSong(Date dateSong) {
 		this.dateSong = dateSong;
 	}
-	public float getDuration() {
+	public int getDuration() {
 		return duration;
 	}
 	public void setMinutesDuration(int duration) {

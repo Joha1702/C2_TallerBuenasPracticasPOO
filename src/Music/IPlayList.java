@@ -10,5 +10,6 @@ public interface IPlayList {
 	public void orderDate(ArrayList<Song> song);
 	public void filterGenre(String genre);
 	public void filterYear(String year);
+	void showPlayList(ArrayList<Song> playList);
 
 }

@@ -1,6 +1,7 @@
 package Music;
 
 import java.util.ArrayList;
+import java.util.UUID;
 /*
  * Clase playList representa un listado de canciones con los siguiente atributos: 
  * nombre playlist
@@ -8,53 +9,52 @@ import java.util.ArrayList;
  * identificador
  * listado de canciones de tipo Song
  */
-public class PlayList implements IPlayList{
+public class PlayList{
 
 	private String name;
 	private int duration;
-	private Integer Identifier;
+	private UUID id;
 	private ArrayList<Song> songs;
 	
 	
 	
-	public PlayList(String name, int duration, Integer identifier) {
+	public PlayList(String name) {
 		this.name = name;
-		this.duration = duration;
-		Identifier = identifier;
+		this.duration = 0;
+		this.id = UUID.randomUUID();
 		this.songs = new ArrayList<Song>();
 	}
 
+	public String getName() {
+		return name;
+	}
 
-
-	@Override
-	public void orderDuration(ArrayList<Song> song) {
-		// TODO Auto-generated method stub
-		
+	public void setName(String name) {
+		this.name = name;
 	}
 
 
 
-	@Override
-	public void orderDate(ArrayList<Song> song) {
-		// TODO Auto-generated method stub
-		
+	public int getDuration() {
+		return duration;
 	}
 
-
-
-	@Override
-	public void filterGenre(String genre) {
-		// TODO Auto-generated method stub
-		
+	public UUID getId() {
+		return id;
 	}
 
-
-
-	@Override
-	public void filterYear(String year) {
-		// TODO Auto-generated method stub
-		
+	public ArrayList<Song> getSongs() {
+		return songs;
 	}
 
-
+	public void setSongs(ArrayList<Song> songs) {
+		this.songs = songs;
+	}
+	
+	public void addSong(Song song) {
+		songs.add(song);
+		duration = duration + song.getDuration();
+	}
+	
+	
 }
