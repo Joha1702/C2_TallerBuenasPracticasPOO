@@ -2,13 +2,25 @@ package Music;
 
 import java.util.ArrayList;
 import java.util.UUID;
-/*
- * Clase playList representa un listado de canciones con los siguiente atributos: 
- * nombre playlist
- * duración en segundos
- * identificador
- * listado de canciones de tipo Song
- */
+
+/**
+* Esta clase representa una lista de reproducción de canciones, con sus atributos y métodos principales.
+* 
+* Ejemplo:
+* PlayList clase = new PlayList("PlayList Pop");
+*   clase.setname(name);
+*   ValorDeRespuesta valor = clase.addSong(Song);
+* 
+*
+* @version 1.0.0 2022-02-13
+*
+* @author Leidy Johana Moreno López - leidymoreno17@gmail.com.
+*         Yeiner Hidalgo - 
+*
+* @since versión 1
+*
+*/
+
 public class PlayList{
 
 	private String name;

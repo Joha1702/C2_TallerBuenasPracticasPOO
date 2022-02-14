@@ -8,8 +8,8 @@ public interface IPlayList {
 	
 	public void orderDuration(ArrayList<Song> song);
 	public void orderDate(ArrayList<Song> song);
-	public void filterGenre(String genre);
-	public void filterYear(String year);
+	public void filterGenre(String genre, ArrayList<Song> songs);
+	public void filterYear(String year, ArrayList<Song> songs);
 	void showPlayList(ArrayList<Song> playList);
 
 }
