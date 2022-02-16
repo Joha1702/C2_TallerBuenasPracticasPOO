@@ -10,7 +10,7 @@ import java.util.Calendar;
 * @version 1.0.0 2022-02-13
 *
 * @author Leidy Johana Moreno López - leidymoreno17@gmail.com.
-*         Yeiner Hidalgo - 
+*         Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 *
 * @since versión 1
 */
@@ -31,10 +31,10 @@ public class PlayListImplementation implements IPlayList {
 
 	@Override
 	public void filterGenre(String genre, ArrayList<Song> songs) {
-
+		System.out.println("\nLas siguientes Canciones son del genero: "+genre+" \n");
 		for(int i = 0; i < songs.size(); i++) {
-			if(songs.get(i).getGenre() == genre){
-				System.out.println("Resultado del filtro: \n");
+			if(songs.get(i).getGenre().equalsIgnoreCase(genre)){
+				
 				System.out.println(i+1+ "-" +songs.get(i).getTitle()+ "-" +songs.get(i).getGenre());
 			}
         }
@@ -42,13 +42,12 @@ public class PlayListImplementation implements IPlayList {
 	
 	
 	@Override
-	public void filterYear(String year, ArrayList<Song> songs) {
+	public void filterYear(int year, ArrayList<Song> songs) {
+		System.out.println("Canciones del año: "+year+" \n");
 		for(int i = 0; i < songs.size(); i++) {
-			int year1 = Integer.parseInt(year);
 			Calendar calendar = Calendar.getInstance();
 			calendar.setTime(songs.get(i).getDateSong());
-			if(calendar.get(Calendar.YEAR) == year1){
-				System.out.println("Resultado del filtro: \n");
+			if(calendar.get(Calendar.YEAR) == year){
 				System.out.println(i+1+ "-" +songs.get(i).getTitle()+ "-" +calendar.get(Calendar.YEAR));
 			}
         }

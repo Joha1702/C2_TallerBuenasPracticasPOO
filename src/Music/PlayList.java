@@ -15,7 +15,7 @@ import java.util.UUID;
 * @version 1.0.0 2022-02-13
 *
 * @author Leidy Johana Moreno López - leidymoreno17@gmail.com.
-*         Yeiner Hidalgo - 
+*         Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 *
 * @since versión 1
 *
@@ -66,6 +66,14 @@ public class PlayList{
 	public void addSong(Song song) {
 		songs.add(song);
 		duration = duration + song.getDuration();
+	}
+	
+	public String getDurationMinutes() {
+		
+		double time = this.duration / 60;
+		double seg = time % 1;
+		double minutes = time - seg;
+		return minutes+" minutos "+seg+" segundos";
 	}
 	
 	
