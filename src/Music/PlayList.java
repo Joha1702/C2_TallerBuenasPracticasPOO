@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 /**
-* Esta clase representa una lista de reproducción de canciones, con sus atributos y métodos principales.
+* Esta clase representa una lista de reproducciï¿½n de canciones, con sus atributos y mï¿½todos principales.
 * 
 * Ejemplo:
 * PlayList clase = new PlayList("PlayList Pop");
@@ -14,10 +14,10 @@ import java.util.UUID;
 *
 * @version 1.0.0 2022-02-13
 *
-* @author Leidy Johana Moreno López - leidymoreno17@gmail.com.
+* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com.
 *         Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 *
-* @since versión 1
+* @since versiï¿½n 1
 *
 */
 
@@ -34,7 +34,7 @@ public class PlayList{
 		this.name = name;
 		this.duration = 0;
 		this.id = UUID.randomUUID();
-		this.songs = new ArrayList<Song>();
+		this.songs = new ArrayList<>();
 	}
 
 	public String getName() {

@@ -22,7 +22,7 @@ public class Main {
 		boolean flat = true;
 		do {
 
-			System.out.println("\nQue desea realizar: \n" + "1. Filtro por genero\n" + "2. Filtro por Año\n"
+			System.out.println("\nQue desea realizar: \n" + "1. Filtro por genero\n" + "2. Filtro por A\u00f1o\n"
 					+ "3. Crear PlayList\n" + "4. Salir");
 			int option = input.nextInt();
 
@@ -34,7 +34,7 @@ public class Main {
 				playListImp.filterGenre(genre, mainplayList);
 				break;
 			case 2:
-				System.out.println("Por favor ingrese el año a filtrar:\n");
+				System.out.println("Por favor ingrese el a\u00f1o a filtrar:\n");
 				int year = input.nextInt();
 				playListImp.filterYear(year, mainplayList);
 				break;
@@ -42,7 +42,7 @@ public class Main {
 				System.out.println("Por favor ingrese el nombre de la PlayList: ");
 				String name = input.next();			
 				
-				System.out.println("Por favor ingrese los números de las canciones para la playList separados por ',' :\n");
+				System.out.println("Por favor ingrese los n\u00fameros de las canciones para la playList separados por ',' :\n");
 				String listSongs = input.next();
 				
 				PlayList playlist = new PlayList(name);
@@ -59,7 +59,7 @@ public class Main {
 					playlist.addSong(mainplayList.get(index-1));
 				}
 				System.out.println("Playlist "+name+" \n"
-						+ "Duración "+playlist.getDurationMinutes()+ " \n"
+						+ "Duraci\u00f3n "+playlist.getDurationMinutes()+ " \n"
 						+ "canciones:");
 				playListImp.showPlayList(playlist.getSongs());
 				break;

@@ -9,7 +9,7 @@ public class MainPlayList {
 
 	public static ArrayList<Song> generateMainPlayList() throws ParseException {
 		
-		ArrayList<Song> songs = new ArrayList<Song>();
+		ArrayList<Song> songs = new ArrayList<>();
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 		//lista de canciones : Nombre,Artista,fecha,genero,caratula,nombre(43 canciones)
 		Song song1 = new Song("Perdon","David Bisbal y Greeicy", format.parse("13-04-2001"), 237, "Pop", "perdon.png", "Perdon");
