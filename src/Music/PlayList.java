@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 /**
-* Esta clase representa una lista de reproducci�n de canciones, con sus atributos y m�todos principales.
+* Esta clase representa una lista de reproduccion de canciones, con sus atributos y metodos principales.
 * 
 * Ejemplo:
 * PlayList clase = new PlayList("PlayList Pop");
