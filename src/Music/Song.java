@@ -2,19 +2,19 @@ package Music;
 
 import java.util.Date;
 import java.util.UUID;
-
+// Lista de canciones del archivo MainPlayList.java
 public class Song {
-	
-	private String title;
-	private String singer;
+	//Atributos
+	private String title;//Titulo de la cancion
+	private String singer;//Cantante
 	private UUID id;
-	private Date dateSong;
-	private int duration; //en segundos
-	private String genre;
-	private String coverPage;
-	private String description;
+	private Date dateSong;//Fecha de la cancion
+	private int duration; //Duracion de la cancion en segundos
+	private String genre;//Genero de la cancion
+	private String coverPage;//Caratula de la cancion
+	private String description;//Descripcion de la cancion
 	
-	
+	//Metodo constructor de song
 	public Song(String title, String singer, Date dateSong, int duration, String genre, String coverPage,
 			String description) {
 		this.title = title;
@@ -26,7 +26,7 @@ public class Song {
 		this.coverPage = coverPage;
 		this.description = description;
 	}
-	
+	// getters y setters para obtener lo valores
 	public String getTitle() {
 		return title;
 	}
@@ -46,13 +46,13 @@ public class Song {
 		return dateSong;
 	}
 	public void setDateSong(Date dateSong) {
-		this.dateSong = dateSong;
+		this.dateSong = dateSong;// fecha para ordenar por fecha
 	}
 	public int getDuration() {
 		return duration;
 	}
 	public void setMinutesDuration(int duration) {
-		this.duration = duration;
+		this.duration = duration;// Duracion para filtrar por tiempo pendiente
 	}
 	public String getGenre() {
 		return genre;

@@ -16,7 +16,7 @@ public class Main {
 		ArrayList<PlayList> playLists = new ArrayList<PlayList>();
 		
 		System.out.println("Bliblioteca principal de musica: \n");
-
+                // imprime la lista de canciones
 		playListImp.showPlayList(mainplayList);
 
 		boolean flat = true;
