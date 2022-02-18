@@ -52,7 +52,7 @@ public class Song {
 		return duration;
 	}
 	public void setMinutesDuration(int duration) {
-		this.duration = duration;// Duracion para filtrar por tiempo pendiente
+		this.duration = duration;// Duracion para ordernar por tiempo pendiente
 	}
 	public String getGenre() {
 		return genre;

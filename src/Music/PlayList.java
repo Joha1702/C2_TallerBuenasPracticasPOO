@@ -14,7 +14,7 @@ import java.util.UUID;
 *
 * @version 1.0.0 2022-02-13
 *
-* @author Leidy Johana Moreno L�pez - leidymoreno17@gmail.com.
+* @author Leidy Johana Moreno Lopez - leidymoreno17@gmail.com.
 *         Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 *
 * @since versi�n 1
@@ -59,10 +59,6 @@ public class PlayList{
 		return songs;
 	}
 
-	public void setSongs(ArrayList<Song> songs) {
-		this.songs = songs;
-	}
-	
 	public void addSong(Song song) {
 		songs.add(song);
 		duration = duration + song.getDuration();

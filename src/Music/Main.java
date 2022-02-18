@@ -23,7 +23,7 @@ public class Main {
 		do {
 
 			System.out.println("\nQue desea realizar: \n" + "1. Filtro por genero\n" + "2. Filtro por A\u00f1o\n"
-					+ "3. Crear PlayList\n" + "4. Salir");
+					+ "3. Crear PlayList\n" + "4. Ordenar por Duracion\n" + "5. Ordenar por Fecha\n"+ "6. Salir");
 			int option = input.nextInt();
 
 			switch (option) {
