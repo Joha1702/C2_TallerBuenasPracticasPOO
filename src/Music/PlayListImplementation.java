@@ -2,31 +2,39 @@ package Music;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 /**
-* Esta clase se utiliza para implementar los métodos de la interfaz IPlayList (que son los comportamientos
-* que se pueden utilizar en una lista de producción). 
+* Esta clase se utiliza para implementar los mï¿½todos de la interfaz IPlayList (que son los comportamientos
+* que se pueden utilizar en una lista de producciï¿½n). 
 *
 * @version 1.0.0 2022-02-13
 *
-* @author Leidy Johana Moreno López - leidymoreno17@gmail.com.
+* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com.
 *         Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 *
-* @since versión 1
+* @since versiï¿½n 1
 */
 
 public class PlayListImplementation implements IPlayList {
 
 	@Override
-	public void orderDuration(ArrayList<Song> song) {
+	public void orderDuration(int duration,ArrayList<Song> song) {
 		// TODO Auto-generated method stub
+                System.out.println("\nLas siguientes Canciones estan ordenadas por Duracion "+duration+" \n");
+                for(int i = 0; i < songs.size(); i++) {
+			
+			}
 
 	}
-
-	@Override
-	public void orderDate(ArrayList<Song> song) {
+       @Override
+	public void orderDate(Date dateSong, ArrayList<Song> song) {
 		// TODO Auto-generated method stub
-
+               System.out.println("\nLas siguientes Canciones estan ordenadas por Fecha "+dateSong+" \n");
+               for(int i = 0; i < songs.size(); i++) {
+			
+			}
+               
 	}
 
 	@Override
@@ -43,7 +51,7 @@ public class PlayListImplementation implements IPlayList {
 	
 	@Override
 	public void filterYear(int year, ArrayList<Song> songs) {
-		System.out.println("Canciones del año: "+year+" \n");
+		System.out.println("Canciones del aï¿½o: "+year+" \n");
 		for(int i = 0; i < songs.size(); i++) {
 			Calendar calendar = Calendar.getInstance();
 			calendar.setTime(songs.get(i).getDateSong());
@@ -62,5 +70,10 @@ public class PlayListImplementation implements IPlayList {
         }
 
 	}
+
+    //@Override
+    public void orderDate(ArrayList<Song> song) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 }
