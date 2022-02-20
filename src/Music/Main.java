@@ -3,6 +3,7 @@ package Music;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -62,6 +63,16 @@ public class Main {
 						+ "Duraci\u00f3n "+playlist.getDurationMinutes()+ " \n"
 						+ "canciones:");
 				playListImp.showPlayList(playlist.getSongs());
+				break;
+          		case 4:
+				System.out.println("Ordenar Canciones por duracion; \n");
+				int duration = 1;
+				playListImp.orderDuration(duration, mainplayList);
+				break;
+          		case 5:
+				System.out.println("Ordenar por fecha\n");
+				int dateSong = 1;
+				playListImp.orderDate(dateSong, mainplayList);
 				break;
 
 			default:

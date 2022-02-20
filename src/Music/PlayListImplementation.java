@@ -19,20 +19,22 @@ import java.util.Date;
 public class PlayListImplementation implements IPlayList {
 
 	@Override
-	public void orderDuration(int duration,ArrayList<Song> song) {
+	public void orderDuration(int duration,ArrayList<Song> songs) {
 		// TODO Auto-generated method stub
-                System.out.println("\nLas siguientes Canciones estan ordenadas por Duracion "+duration+" \n");
+                System.out.println("\nLas siguientes Canciones estan ordenadas por Duracion "+" \n");
                 for(int i = 0; i < songs.size(); i++) {
 			
+                            System.out.println(i+1+ "-" +songs.get(i).getDuration()+"-"+songs.get(i).getTitle());
+                        
 			}
 
 	}
        @Override
-	public void orderDate(Date dateSong, ArrayList<Song> song) {
+	public void orderDate(Date dateSong, ArrayList<Song> songs) {
 		// TODO Auto-generated method stub
-               System.out.println("\nLas siguientes Canciones estan ordenadas por Fecha "+dateSong+" \n");
+               System.out.println("\nLas siguientes Canciones estan ordenadas por Fecha "+" \n");
                for(int i = 0; i < songs.size(); i++) {
-			
+			System.out.println(i+1+ "-" +songs.get(i).getTitle()+ "-" +songs.get(i).getDateSong());
 			}
                
 	}
@@ -71,9 +73,10 @@ public class PlayListImplementation implements IPlayList {
 
 	}
 
-    //@Override
-    public void orderDate(ArrayList<Song> song) {
+    void orderDate(int dateSong, ArrayList<Song> mainplayList) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+
 
 }
