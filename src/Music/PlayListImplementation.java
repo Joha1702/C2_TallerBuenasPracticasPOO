@@ -2,6 +2,8 @@ package Music;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 
 /**
@@ -16,21 +18,45 @@ import java.util.Date;
 * @since versiï¿½n 1
 */
 
-public class PlayListImplementation implements IPlayList {
+public class PlayListImplementation implements IPlayList, Comparator<Song>{
 
 	@Override
-	public void orderDuration(int duration,ArrayList<Song> songs) {
-		// TODO Auto-generated method stub
-                System.out.println("\nLas siguientes Canciones estan ordenadas por Duracion "+" \n");
+	public void orderDuration(int orderOption, ArrayList<Song> songs) {
+		
+				if (orderOption == 1) {
+					
+                System.out.println("\nLas siguientes Canciones estan ordenadas por Duracion Ascendente "+" \n");
+                System.out.println("\n Duración -- Título "+" \n");
+                
+                Collections.sort(songs, new Comparator<Song>() {
+                	@Override
+                	public int compare(Song song1, Song song2) {
+                		return new Integer(song1.getDuration()).compareTo(new Integer(song2.getDuration()));
+                	}
+                });
+				}else if (orderOption == 2) {
+					System.out.println("\nLas siguientes Canciones estan ordenadas por Duracion Descendente "+" \n");
+					System.out.println("\n Duración -- Título "+" \n");
+	                
+	                
+	                Collections.sort(songs, new Comparator<Song>() {
+	                	@Override
+	                	public int compare(Song song1, Song song2) {
+	                		return new Integer(song2.getDuration()).compareTo(new Integer(song1.getDuration()));
+	                	}
+	                });
+				}else {
+					System.out.println("La opción elegida no es válida");
+				}
+				
+                
                 for(int i = 0; i < songs.size(); i++) {
-			
-                            System.out.println(i+1+ "-" +songs.get(i).getDuration()+"-"+songs.get(i).getTitle());
-                        
-			}
-
+        			System.out.println(i+1+ "-" +songs.get(i).getDuration()+ " - " +songs.get(i).getTitle());
+        			} 
 	}
-       @Override
-	public void orderDate(Date dateSong, ArrayList<Song> songs) {
+	
+    @Override
+	public void orderDate(int optionOrder, ArrayList<Song> songs) {
 		// TODO Auto-generated method stub
                System.out.println("\nLas siguientes Canciones estan ordenadas por Fecha "+" \n");
                for(int i = 0; i < songs.size(); i++) {
@@ -73,9 +99,10 @@ public class PlayListImplementation implements IPlayList {
 
 	}
 
-    void orderDate(int dateSong, ArrayList<Song> mainplayList) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+	@Override
+	public int compare(Song arg0, Song arg1) {
+		return 0;
+	}
 
 
 

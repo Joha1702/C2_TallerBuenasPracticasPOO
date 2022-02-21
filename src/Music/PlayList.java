@@ -72,5 +72,13 @@ public class PlayList{
 		return minutes+" minutos "+seg+" segundos";
 	}
 	
+	public void showPlayLists(ArrayList<PlayList> playLists){
+		System.out.println("Listado de PlayLists creadas: ");
+		for (int i=0; i<playLists.size(); i++) {
+			System.out.println(i+1+" - "+playLists.get(i).getName());
+		}
+
+	}
+	
 	
 }

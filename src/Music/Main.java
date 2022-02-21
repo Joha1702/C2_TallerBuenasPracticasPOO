@@ -59,15 +59,21 @@ public class Main {
 				for (int index : intList) {
 					playlist.addSong(mainplayList.get(index-1));
 				}
+				playLists.add(playlist);
 				System.out.println("Playlist "+name+" \n"
 						+ "Duraci\u00f3n "+playlist.getDurationMinutes()+ " \n"
 						+ "canciones:");
+				
 				playListImp.showPlayList(playlist.getSongs());
+				playlist.showPlayLists(playLists);
 				break;
           		case 4:
-				System.out.println("Ordenar Canciones por duracion; \n");
-				int duration = 1;
-				playListImp.orderDuration(duration, mainplayList);
+          		System.out.println("Elija una opción para ordenar: \n"
+          				+ "1. Ascendente \n"
+          				+ "2. Descendente");
+          		int orderOption = input.nextInt();
+				playListImp.orderDuration(orderOption, mainplayList);
+				//playListImp.showPlayList(mainplayList);
 				break;
           		case 5:
 				System.out.println("Ordenar por fecha\n");
