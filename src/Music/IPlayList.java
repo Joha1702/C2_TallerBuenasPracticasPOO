@@ -3,7 +3,7 @@ package Music;
 import java.util.ArrayList;
 import java.util.Date;
 /**
-* Esta Interfaz se utiliza para declarar los m�todos que se pueden utilizar en una lista de reproducci�n de canciones. 
+* Esta Interfaz se utiliza para declarar los metodos que se pueden utilizar en una lista de reproducci�n de canciones. 
 *
 * @version 1.0.0 2022-02-13
 *

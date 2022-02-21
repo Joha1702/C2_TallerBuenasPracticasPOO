@@ -3,14 +3,36 @@ package Music;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+
+/**
+ * Esta clase representa la biblioteca principal de canciones que se le presenta al usuario para crear nuevas playLists.
+ *
+ * @version 1.0.0 2022-02-13
+ *
+ * @author Leidy Johana Moreno Lopez - leidymoreno17@gmail.com. 
+ *        Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
+ *
+ * @since versiï¿½n 1
+ *
+ */
 public class MainPlayList {
 	
-
+	/**
+	* Método para generar (en este caso de forma manual) la biblioteca principal de canciones.
+	*
+	* @return listado principal de canciones
+	* @throws Exception
+	*
+	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
+	*
+	* @since version 1
+	*
+	*/
 	public static ArrayList<Song> generateMainPlayList() throws ParseException {
 		
 		ArrayList<Song> songs = new ArrayList<>();
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-		//lista de canciones : Nombre,Artista,fecha,genero,caratula,nombre(43 canciones)
 		Song song1 = new Song("Perdon","David Bisbal y Greeicy", format.parse("13-04-2001"), 237, "Pop", "perdon.png", "Perdon");
 		songs.add(song1);
 		Song song2 = new Song("Mala mia","Maluma", format.parse("01-01-2015"), 325, "Regueton", "malamia.png", "mala mia");

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
 
 /**
 * Esta clase se utiliza para implementar los mï¿½todos de la interfaz IPlayList (que son los comportamientos
@@ -20,6 +19,22 @@ import java.util.Date;
 
 public class PlayListImplementation implements IPlayList, Comparator<Song>{
 
+	/**
+	* Método para ordenar un listado de canciones por duración, en orden ascendente o descendente.
+	* utilizando la sobreescritura del metodo compare de la interfaz Comparator
+	*
+	* @param orderOption: 1 para orden ascendente ó 2 para orden descendente.
+	* @param songs: listado de canciones a ordenar.
+	* @return no retorna nada.
+	* @throws Exception
+	*
+	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
+	*
+	* @since version 1
+	*
+	*/
+	
 	@Override
 	public void orderDuration(int orderOption, ArrayList<Song> songs) {
 		
@@ -55,6 +70,20 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
         			} 
 	}
 	
+	/**
+	* Método para ordenar un listado de canciones por fecha, en orden ascendente o descendente.
+	*
+	* @param orderOption: 1 para orden ascendente ó 2 para orden descendente.
+	* @param songs: listado de canciones a ordenar.
+	* @return no retorna nada.
+	* @throws Exception
+	*
+	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
+	*
+	* @since version 1
+	*
+	*/
     @Override
 	public void orderDate(int optionOrder, ArrayList<Song> songs) {
 		// TODO Auto-generated method stub
@@ -64,6 +93,21 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 			}
                
 	}
+    
+	/**
+	* Método para filtrar por un genero indicado por el usuario dentro de un listado de canciones.
+	*
+	* @param genre: genero musical a ordenar de tipo String.
+	* @param songs: listado de canciones a ordenar.
+	* @return no retorna nada.
+	* @throws Exception
+	*
+	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
+	*
+	* @since version 1
+	*
+	*/
 
 	@Override
 	public void filterGenre(String genre, ArrayList<Song> songs) {
@@ -77,6 +121,21 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 	}
 	
 	
+	/**
+	* Método para filtrar por Anyo indicado por el usuario en un listado de canciones.
+	*
+	* @param year: año a filtrar de tipo entero.
+	* @param songs: listado de canciones a ordenar.
+	* @return no retorna nada.
+	* @throws Exception
+	*
+	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
+	*
+	* @since version 1
+	*
+	*/
+	
 	@Override
 	public void filterYear(int year, ArrayList<Song> songs) {
 		System.out.println("Canciones del aï¿½o: "+year+" \n");
@@ -89,6 +148,19 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
         }
 
 	}
+	
+	/**
+	* Método para mostrar las canciones de un PlayList
+	*
+	* @param songs: listado de canciones a ordenar.
+	* @return no retorna nada.
+	*
+	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
+	*
+	* @since version 1
+	*
+	*/
 
 	@Override
 	public void showPlayList(ArrayList<Song> playList) {
@@ -99,9 +171,47 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 
 	}
 
+	/**
+	* Método para comprar canciones y realizar el ordenamiento por duración y Fecha.
+	*
+	* @param arg0: argmento 1 de tipo canción.
+	* @param arg1: argmento 2 de tipo canción.
+	* @return no retorna nada.
+	*
+	* @author viene de la interfaz Comparator
+	*
+	* @since version 1
+	*
+	*/
 	@Override
 	public int compare(Song arg0, Song arg1) {
 		return 0;
+	}
+	
+	
+	/**
+	* Método para mostrar las playLists creadas
+	*
+	* @param songs: listado de canciones a ordenar.
+	* @return no retorna nada.
+	*
+	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
+	*
+	* @since version 1
+	*
+	*/
+	public void showPlayLists(ArrayList<PlayList> playLists) {
+		System.out.println("Listado de PlayLists creadas: ");
+		if (playLists.isEmpty()) {
+			System.out.println("No se ha creado ninguna PlayList");
+		} else {
+
+			for (int i = 0; i < playLists.size(); i++) {
+				System.out.println(i + 1 + " - " + playLists.get(i).getName());
+			}
+		}
+
 	}
 
 
