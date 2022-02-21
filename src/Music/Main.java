@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
-* Esta clase es la principal del proyecto y en ella se implementa la interacción con el usuario.
+* Esta clase es la principal del proyecto y en ella se implementa la interacciï¿½n con el usuario.
 *
 * @version 1.0.0 2022-02-13
 *
@@ -20,11 +20,11 @@ import java.util.Scanner;
 public class Main {
 
 	/**
-	* Método principal para implementar la interacción con el usuario donde se le muestra un listado principal de canciones y
+	* Mï¿½todo principal para implementar la interacciï¿½n con el usuario donde se le muestra un listado principal de canciones y
 	* el usuario puede creer playLists, filtrar u ordenar.
 	* @throws ParseException
 	*
-	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com
 	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 	*
 	* @since version 1
@@ -92,7 +92,7 @@ public class Main {
 				break;
 
 			case 4:
-				System.out.println("Elija una opción para ordenar: \n" + "1. Ascendente \n" + "2. Descendente");
+				System.out.println("Elija una opciï¿½n para ordenar: \n" + "1. Ascendente \n" + "2. Descendente");
 				int orderOption = input.nextInt();
 
 				System.out.println(
@@ -113,7 +113,7 @@ public class Main {
 				break;
 
 			case 5:
-				System.out.println("Elija una opción para ordenar: \n" + "1. Ascendente \n" + "2. Descendente");
+				System.out.println("Elija una opcion para ordenar: \n" + "1. Ascendente \n" + "2. Descendente");
 				int orderOptionDate = input.nextInt();
 
 				System.out.println(
@@ -121,11 +121,11 @@ public class Main {
 				playListImp.showPlayLists(playLists);
 				String nameplaylist = input.next();
 				if (nameplaylist.equalsIgnoreCase("mainPlayList")) {
-					playListImp.orderDuration(orderOptionDate, mainplayList);
+					playListImp.orderDate(orderOptionDate, mainplayList);
 				}
 				for (int i = 0; i< playLists.size();i++) {
 					if(playLists.get(i).getName().equalsIgnoreCase(nameplaylist)) {
-						playListImp.orderDuration(orderOptionDate, playLists.get(i).getSongs());
+						playListImp.orderDate(orderOptionDate, playLists.get(i).getSongs());
 					}else {
 						System.out.println("el nombre de la PlayList ingresada no existe");
 					}

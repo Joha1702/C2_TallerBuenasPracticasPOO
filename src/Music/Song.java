@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
-* Esta clase se utiliza para representar los atributos principales de una canción musical y los métodos get and set para
+* Esta clase se utiliza para representar los atributos principales de una canciï¿½n musical y los mï¿½todos get and set para
 * acceder a los atributos y para dar valor a los atributos. 
 *
 * @version 1.0.0 2022-02-13
@@ -18,51 +18,54 @@ import java.util.UUID;
 public class Song {
 
 	/*
-	 * Representa el titulo de la canción de tipo String
+	 * Representa el titulo de la canciï¿½n de tipo String
 	 */
 	private String title;
 	/*
-	 * Representa el nombre del cancante o cantantes de la canción de tipo String.
+	 * Representa el nombre del cancante o cantantes de la canciï¿½n de tipo String.
 	 */
 	private String singer;
 	/*
-	 * Representa el id de la canción, se genera de forma automatica.
+	 * Representa el id de la canciï¿½n, se genera de forma automatica.
 	 */
 	private UUID id;
 	/*
-	 * Representa la fecha de la canción de tipo Date.
+	 * Representa la fecha de la canciï¿½n de tipo Date.
 	 */
 	private Date dateSong;
 	/*
-	 * Representa la duración de la canción en segundos.
+	 * Representa la duraciï¿½n de la canciï¿½n en segundos.
 	 */
 	private int duration;
 	/*
-	 * Representa el genero musical de la canción de tipo String
+	 * Representa el genero musical de la canciï¿½n de tipo String
 	 */
 	private String genre;
 	/*
-	 * Representa el nombre de caratula de la canción de tipo String.
+	 * Representa el nombre de caratula de la canciï¿½n de tipo String.
 	 */
 	private String coverPage;
 	/*
-	 * Representa la descripción de la canción de tipo String.
+	 * Representa la descripciï¿½n de la canciï¿½n de tipo String.
 	 */
 	private String description;
+
+    public Song() {
+    }
 	
 	/**
-	* Método constructor de la clase Cancion
+	* Mï¿½todo constructor de la clase Cancion
 	*
-	* @param title: titulo de la canción
+	* @param title: titulo de la canciï¿½n
 	* @param singer: cantante
-	* @param dateSong: Fecha de la canción
+	* @param dateSong: Fecha de la canciï¿½n
 	* @param duration: duracion de la cancion en segundos.
-	* @param genre: genero musical de la canción de tipo String
-	* @param coverPage: caratula de la canción.
-	* @param description: descripción de la canción.
+	* @param genre: genero musical de la canciï¿½n de tipo String
+	* @param coverPage: caratula de la canciï¿½n.
+	* @param description: descripciï¿½n de la canciï¿½n.
 	* @return no retorna nada.
 	*
-	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com
 	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 	*
 	* @since version 1
@@ -81,12 +84,12 @@ public class Song {
 	}
 	
 	/**
-	* Métodos get y Set para obtener e ingresar el valor de cada una de los atributos a excepción del Id que se genera de 
+	* Mï¿½todos get y Set para obtener e ingresar el valor de cada una de los atributos a excepciï¿½n del Id que se genera de 
 	* forma automatica.
-	* @param: para los métodos set es el valor del atributo.
-	* @return para los métodos get es el valor del atributo.
+	* @param: para los mï¿½todos set es el valor del atributo.
+	* @return para los mï¿½todos get es el valor del atributo.
 	*
-	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com
 	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 	*
 	* @since version 1

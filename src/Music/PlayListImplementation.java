@@ -20,15 +20,15 @@ import java.util.Comparator;
 public class PlayListImplementation implements IPlayList, Comparator<Song>{
 
 	/**
-	* Método para ordenar un listado de canciones por duración, en orden ascendente o descendente.
+	* Mï¿½todo para ordenar un listado de canciones por duraciï¿½n, en orden ascendente o descendente.
 	* utilizando la sobreescritura del metodo compare de la interfaz Comparator
 	*
-	* @param orderOption: 1 para orden ascendente ó 2 para orden descendente.
+	* @param orderOption: 1 para orden ascendente ï¿½ 2 para orden descendente.
 	* @param songs: listado de canciones a ordenar.
 	* @return no retorna nada.
 	* @throws Exception
 	*
-	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com
 	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 	*
 	* @since version 1
@@ -41,7 +41,7 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 				if (orderOption == 1) {
 					
                 System.out.println("\nLas siguientes Canciones estan ordenadas por Duracion Ascendente "+" \n");
-                System.out.println("\n Duración -- Título "+" \n");
+                System.out.println("\n Duraciï¿½n -- Tï¿½tulo "+" \n");
                 
                 Collections.sort(songs, new Comparator<Song>() {
                 	@Override
@@ -51,7 +51,7 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
                 });
 				}else if (orderOption == 2) {
 					System.out.println("\nLas siguientes Canciones estan ordenadas por Duracion Descendente "+" \n");
-					System.out.println("\n Duración -- Título "+" \n");
+					System.out.println("\n Duraciï¿½n -- Tï¿½tulo "+" \n");
 	                
 	                
 	                Collections.sort(songs, new Comparator<Song>() {
@@ -61,7 +61,7 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 	                	}
 	                });
 				}else {
-					System.out.println("La opción elegida no es válida");
+					System.out.println("La opciï¿½n elegida no es vï¿½lida");
 				}
 				
                 
@@ -71,14 +71,14 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 	}
 	
 	/**
-	* Método para ordenar un listado de canciones por fecha, en orden ascendente o descendente.
+	* Mï¿½todo para ordenar un listado de canciones por fecha, en orden ascendente o descendente.
 	*
-	* @param orderOption: 1 para orden ascendente ó 2 para orden descendente.
+	* @param orderOption: 1 para orden ascendente ï¿½ 2 para orden descendente.
 	* @param songs: listado de canciones a ordenar.
 	* @return no retorna nada.
 	* @throws Exception
 	*
-	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com
 	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 	*
 	* @since version 1
@@ -86,23 +86,33 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 	*/
     @Override
 	public void orderDate(int optionOrder, ArrayList<Song> songs) {
-		// TODO Auto-generated method stub
+	       Song aux = new Song();
                System.out.println("\nLas siguientes Canciones estan ordenadas por Fecha "+" \n");
-               for(int i = 0; i < songs.size(); i++) {
+               for(int i = 0; i < songs.size()-1; i++) {
+                   for(int j = 0; j < songs.size()-1; j++) {
+                       Calendar calendar = Calendar.getInstance();
+                       calendar.setTime(songs.get(i).getDateSong());
+                       Calendar calendar2 = Calendar.getInstance();
+                       calendar2.setTime(songs.get(j+1).getDateSong());
+                   //    if ({
+                           
+                           
+                       }
+                   }
 			System.out.println(i+1+ "-" +songs.get(i).getTitle()+ "-" +songs.get(i).getDateSong());
 			}
                
 	}
     
 	/**
-	* Método para filtrar por un genero indicado por el usuario dentro de un listado de canciones.
+	* Mï¿½todo para filtrar por un genero indicado por el usuario dentro de un listado de canciones.
 	*
 	* @param genre: genero musical a ordenar de tipo String.
 	* @param songs: listado de canciones a ordenar.
 	* @return no retorna nada.
 	* @throws Exception
 	*
-	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com
 	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 	*
 	* @since version 1
@@ -122,14 +132,14 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 	
 	
 	/**
-	* Método para filtrar por Anyo indicado por el usuario en un listado de canciones.
+	* Mï¿½todo para filtrar por Anyo indicado por el usuario en un listado de canciones.
 	*
-	* @param year: año a filtrar de tipo entero.
+	* @param year: aï¿½o a filtrar de tipo entero.
 	* @param songs: listado de canciones a ordenar.
 	* @return no retorna nada.
 	* @throws Exception
 	*
-	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com
 	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 	*
 	* @since version 1
@@ -150,12 +160,12 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 	}
 	
 	/**
-	* Método para mostrar las canciones de un PlayList
+	* Mï¿½todo para mostrar las canciones de un PlayList
 	*
 	* @param songs: listado de canciones a ordenar.
 	* @return no retorna nada.
 	*
-	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com
 	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 	*
 	* @since version 1
@@ -172,10 +182,10 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 	}
 
 	/**
-	* Método para comprar canciones y realizar el ordenamiento por duración y Fecha.
+	* Mï¿½todo para comprar canciones y realizar el ordenamiento por duraciï¿½n y Fecha.
 	*
-	* @param arg0: argmento 1 de tipo canción.
-	* @param arg1: argmento 2 de tipo canción.
+	* @param arg0: argmento 1 de tipo canciï¿½n.
+	* @param arg1: argmento 2 de tipo canciï¿½n.
 	* @return no retorna nada.
 	*
 	* @author viene de la interfaz Comparator
@@ -190,12 +200,12 @@ public class PlayListImplementation implements IPlayList, Comparator<Song>{
 	
 	
 	/**
-	* Método para mostrar las playLists creadas
+	* Mï¿½todo para mostrar las playLists creadas
 	*
 	* @param songs: listado de canciones a ordenar.
 	* @return no retorna nada.
 	*
-	* @author Leidy Johana Moreno López - leidymoreno17@gmail.com
+	* @author Leidy Johana Moreno Lï¿½pez - leidymoreno17@gmail.com
 	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 	*
 	* @since version 1
