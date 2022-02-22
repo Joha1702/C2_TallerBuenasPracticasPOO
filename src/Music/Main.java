@@ -20,11 +20,11 @@ import java.util.Scanner;
 public class Main {
 
 	/**
-	* M�todo principal para implementar la interacci�n con el usuario donde se le muestra un listado principal de canciones y
+	* Metodo principal para implementar la interacci�n con el usuario donde se le muestra un listado principal de canciones y
 	* el usuario puede creer playLists, filtrar u ordenar.
 	* @throws ParseException
 	*
-	* @author Leidy Johana Moreno L�pez - leidymoreno17@gmail.com
+	* @author Leidy Johana Moreno Lopez - leidymoreno17@gmail.com
 	*  			Yeiner Hidalgo - yeinerhidalgomolina@gmail.com
 	*
 	* @since version 1
@@ -36,7 +36,7 @@ public class Main {
 
 		ArrayList<Song> mainplayList = MainPlayList.generateMainPlayList();
 		PlayListImplementation playListImp = new PlayListImplementation();
-		ArrayList<PlayList> playLists = new ArrayList<PlayList>();
+		ArrayList<PlayList> playLists = new ArrayList<>();
 
 		System.out.println("Bliblioteca principal de musica: \n");
 		playListImp.showPlayList(mainplayList);
