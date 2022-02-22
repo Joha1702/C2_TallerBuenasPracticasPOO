@@ -1,5 +1,6 @@
 package Music;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 /**
@@ -16,7 +17,7 @@ import java.util.Date;
 public interface IPlayList {
 	
 	public void orderDuration(int optionOrder,ArrayList<Song> song);
-	public void orderDate(int optionOrder, ArrayList<Song> song);
+	public void orderDate(int optionOrder, ArrayList<Song> song) throws ParseException;
 	public void filterGenre(String genre, ArrayList<Song> songs);
 	public void filterYear(int year, ArrayList<Song> songs);
 	void showPlayList(ArrayList<Song> playList);
